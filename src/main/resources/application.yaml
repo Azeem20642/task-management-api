@@ -1,3 +1,8 @@
 spring:
   application:
     name: task-management-api
+
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=task_management_db;encrypt=true;trustServerCertificate=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
