@@ -6,3 +6,7 @@ spring:
     url: jdbc:sqlserver://localhost:1433;databaseName=task_management_db;encrypt=true;trustServerCertificate=true
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
