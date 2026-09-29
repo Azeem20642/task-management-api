@@ -1,27 +1,13 @@
-package com.azeem.taskmanagementapi.entity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+package com.azeem.taskmanagementapi.dto;
 
 
 
-@Entity
-@Table(name = "tasks")
-
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
+public class TaskResponse {
+    private Long id;
     private String title;
-    private String Description;
+    private String description;
     private boolean completed;
 
-    public Task(){
-
-    }
     public Long getId(){
         return id;
 
@@ -40,11 +26,11 @@ public class Task {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        this.Description = description;
+        this.description = description;
     }
 
     public boolean isCompleted() {
@@ -54,6 +40,5 @@ public class Task {
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
+
 }
-
-
