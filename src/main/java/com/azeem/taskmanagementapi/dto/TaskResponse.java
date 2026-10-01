@@ -7,6 +7,7 @@ public class TaskResponse {
     private String title;
     private String description;
     private boolean completed;
+    private String priority;
 
     public Long getId(){
         return id;
@@ -39,6 +40,13 @@ public class TaskResponse {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    public void setPriority(String priority){
+        this.priority = priority;
+    }
+    public String getPriority(){
+        return priority;
     }
 
 }

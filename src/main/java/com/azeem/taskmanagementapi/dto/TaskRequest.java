@@ -11,6 +11,7 @@ public class TaskRequest {
     @Size(max = 500, message = "Description must not exceed 500 characters")
     private String description;
     private boolean completed;
+    private String priority;
 
 
 
@@ -36,5 +37,12 @@ public class TaskRequest {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    public void setPriority(String priority){
+        this.priority = priority;
+    }
+    public String getPriority(){
+        return priority;
     }
 }
