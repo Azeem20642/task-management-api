@@ -22,6 +22,7 @@ public class TaskService {
         t.setTitle(task.getTitle());
         t.setDescription(task.getDescription());
         t.setCompleted(task.isCompleted());
+        t.setPriority(task.getPriority());
         Task savedTask = taskRepository.save(t);
 
         return mapToResponse(savedTask);
@@ -45,6 +46,7 @@ public class TaskService {
         existingTask.setTitle(task.getTitle());
         existingTask.setDescription(task.getDescription());
         existingTask.setCompleted(task.isCompleted());
+        existingTask.setPriority(task.getPriority());
         return mapToResponse(existingTask);
         
     }
@@ -57,6 +59,7 @@ public class TaskService {
         response.setTitle(task.getTitle());
         response.setDescription(task.getDescription());
         response.setCompleted(task.isCompleted());
+        response.setPriority(task.getPriority());
 
         return response;
     }

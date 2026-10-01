@@ -18,6 +18,7 @@ public class Task {
     private String title;
     private String Description;
     private boolean completed;
+    private String priority;
 
     public Task(){
 
@@ -53,6 +54,13 @@ public class Task {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    public void setPriority(String priority){
+        this.priority = priority;
+    }
+    public String getPriority(){
+        return priority;
     }
 }
 
